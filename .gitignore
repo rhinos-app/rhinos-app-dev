@@ -1,6 +1,8 @@
 .idea/
 node_modules/
-build
+android/build/
+android/app/build/
+ios/build/
 .DS_Store
 *.log
 temp.*
