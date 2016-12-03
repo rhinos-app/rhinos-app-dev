@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "react-native-gifted-form": {
+      "version": "0.0.13",
+      "from": "react-native-gifted-form",
+      "dependencies": {
+        "apsl-react-native-button": {
+          "version": "git+https://github.com/ngduc/react-native-button.git",
+          "from": "apsl-react-native-button@~3.0.0"
+        }
+      }
+    }
+  }
+}
