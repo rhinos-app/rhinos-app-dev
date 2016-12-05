@@ -14,6 +14,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
+        // exclude node_modules except ES6 modules:
         exclude: /node_modules\/(?!(react-native-|apsl-react-native)).*/,
         include: [
             path.resolve(__dirname, "../App"),
