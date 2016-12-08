@@ -1,13 +1,15 @@
-# rhinos-app-dev
+<img src="http://cdn.shopify.com/s/files/1/0249/0754/products/Rhino_1.jpg?v=1470910706" width="100">
+
+# Rhinos-app
 
 Rhinos-app is a react-native app which uses [react-native-web](https://github.com/necolas/react-native-web) to achieve cross-platform design. 
 
 *Demo video:*
 [![Demo video](docs/assets/demo.png)](https://www.youtube.com/watch?v=tJRVfUz6vbI)
 
-## FEATURES:
+## FEATURES: :star2:
 
-  * Runs on Android, iOS, Web (can run as a Windows/MacOS/Linux desktop app with Electron)
+  * :iphone: :computer: Runs on Android, iOS, Web (can run as a Windows/MacOS/Linux desktop app with Electron)
   * [SimpleNavigator](App/View/SimpleNavigator.js) with transition Fx (using Animated)
   * [React-native-gifted-form](https://github.com/FaridSafi/react-native-gifted-form)
   * [React-native-elements](https://github.com/react-native-community/react-native-elements), react-native-vector-icons (FontAwesome)
@@ -60,4 +62,4 @@ $ npm run web
 
 ## CONTRIBUTING
 
-PR, Stars ✭ and Issue Reporting are always welcome :)
+PRs, Stars :star: and Issue Reporting :beetle: are always welcome :)
