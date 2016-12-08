@@ -5,6 +5,7 @@ import {
   View,
   Platform
 } from 'react-native'
+import { Button } from 'react-native-elements'
 import baseStyles from '../baseStyles'
 
 const { GiftedForm } = require('react-native-gifted-form')
@@ -12,7 +13,7 @@ const { GiftedForm } = require('react-native-gifted-form')
 export default class MainView extends React.Component {
   render () {
     return (
-      <View style={styles.container}>
+      <View style={styles.view}>
         <Text style={styles.welcome}>
           Welcome to React Native for {Platform.OS}!
         </Text>
@@ -21,12 +22,16 @@ export default class MainView extends React.Component {
         </Text>
         <Text style={styles.instructions}>
           Press Cmd+R to reload,{'\n'}
-          { Platform.OS !== "web" ? "Cmd+D or shake for dev menu": "" }
+          { Platform.OS !== 'web' ? 'Cmd+D or shake for dev menu': '' }
         </Text>
 
-        <Text style={baseStyles.link} onPress={() => this.props.nav.linkTo('contactUs')}>
-          Go to Contact Us
-        </Text>
+        <Button
+          raised
+          icon={{ name: 'paper-plane-o', type: 'font-awesome' }}
+          title="Go to Contact Us"
+          onPress={() => this.props.nav.linkTo('contactUs')}
+          buttonStyle={baseStyles.link}
+        />
 
         <GiftedForm style={styles.myForm}>
           <GiftedForm.TextInputWidget
@@ -42,14 +47,13 @@ export default class MainView extends React.Component {
             clearButtonMode="while-editing"
           />
         </GiftedForm>
-
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  view: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

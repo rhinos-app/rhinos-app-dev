@@ -8,9 +8,13 @@
     "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js -d --inline --hot --colors"
   },
   "dependencies": {
+    "dummy-pkg": "0.0.1",
     "react": "~15.3.2",
     "react-native": "0.39.0",
+    "react-native-animatable": "^1.1.0",
+    "react-native-elements": "^0.7.1",
     "react-native-gifted-form": "^0.0.13",
+    "react-native-vector-icons": "^3.0.0",
     "react-native-web": "0.0.55"
   },
   "devDependencies": {
@@ -26,6 +30,7 @@
     "eslint": "^3.11.1",
     "eslint-plugin-react": "^6.7.1",
     "jest": "17.0.3",
+    "json-loader": "^0.5.4",
     "react-test-renderer": "15.4.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",

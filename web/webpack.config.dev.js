@@ -13,9 +13,13 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.js$/,
-        // exclude node_modules except ES6 modules:
-        exclude: /node_modules\/(?!(react-native-|apsl-react-native)).*/,
+        // exclude node_modules except ES6 modules:   #TODO: use include for whitelist.
+        exclude: /node_modules\/(?!(react-native-|apsl-react-native|native-base)).*/,
         include: [
             path.resolve(__dirname, "../App"),
             path.resolve(__dirname, "../")
@@ -27,6 +31,11 @@ module.exports = {
         test: /\.(gif|jpe?g|png|svg)$/,
         loader: 'url-loader',
         query: { name: '[name].[hash:16].[ext]' }
+      },
+      {
+        test: /\.ttf$/,
+        loader: 'url-loader', // or directly file-loader
+        include: path.resolve(__dirname, "../node_modules/react-native-vector-icons"),
       }
     ]
   },
@@ -42,7 +51,9 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'react-native': 'react-native-web'
-    }
+      'react-native': 'react-native-web',
+      'dummy-pkg': path.join(__dirname, '../App/webInit.js') // #TODO: improve this
+    },
+    extensions: ['', '.js']
   }
 }

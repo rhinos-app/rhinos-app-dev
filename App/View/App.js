@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Platform } from 'react-native'
+import WebInit from 'dummy-pkg' // web only (webpack's alias to webInit.js) - #TODO: improve this.
 
 import SimpleNavigator from './SimpleNavigator'
 import MainView from './MainView'
@@ -10,6 +11,7 @@ export class App extends Component {
   state = {}
 
   render () {
+    // #TODO: <View> is required for Android, otherwise, it's blank. On web, it works without <View>
     return (
       <View style={styles.view}>
         <SimpleNavigator views={{

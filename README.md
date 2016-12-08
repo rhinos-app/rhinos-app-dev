@@ -7,8 +7,9 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
 ## FEATURES:
 
   * Runs on Android, iOS, Web (can run as a Windows/MacOS/Linux desktop app with Electron)
-  * SimpleNavigator with transition Fx (using Animated)
-  * React-native-gifted-form
+  * [SimpleNavigator](App/View/SimpleNavigator.js) with transition Fx (using Animated)
+  * [React-native-gifted-form](https://github.com/FaridSafi/react-native-gifted-form)
+  * [React-native-elements](https://github.com/react-native-community/react-native-elements), react-native-vector-icons (FontAwesome)
   * Miscellaneous features: ESLint, Webpack
 
 ## PREREQUISITES:
@@ -55,3 +56,7 @@ $ npm run web
 ```    
     $ react-native run-ios
 ```
+
+## CONTRIBUTING
+
+PR, Stars ✭ and Issue Reporting are always welcome :)

@@ -37,13 +37,12 @@ export default class SimpleNavigator extends React.Component {
       this.history = ['index']
       this.currentComp = this.props.views[ 'index' ]
     }
-    const viewEl = (<this.currentComp nav={this} />)
 
     return (
       <Animated.View
         style={{ opacity: this.state.fadeFxValue }}
       >
-        {viewEl}
+        <this.currentComp nav={this} />
       </Animated.View>
     )
   }

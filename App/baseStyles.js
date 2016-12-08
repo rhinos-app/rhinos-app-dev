@@ -12,7 +12,6 @@ export default StyleSheet.create({
     fontSize: 20
   },
   link: {
-    color: 'darkblue',
-    marginTop: 20,
+    marginTop: 20
   }
 })
