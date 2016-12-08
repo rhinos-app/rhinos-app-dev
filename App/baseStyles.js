@@ -5,7 +5,7 @@ import {
 export default StyleSheet.create({
   view: {
     padding: 10,
-    paddingTop: 30,
+    paddingTop: 10,
     backgroundColor: '#F5FCFF'
   },
   h3: {

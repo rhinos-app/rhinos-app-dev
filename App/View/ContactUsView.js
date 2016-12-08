@@ -3,6 +3,7 @@ import {
     View,
     Text
 } from 'react-native'
+import { Button } from 'react-native-elements'
 import baseStyles from '../baseStyles'
 
 export default class ContactUsView extends React.Component {
@@ -14,13 +15,21 @@ export default class ContactUsView extends React.Component {
           Contact Us
         </Text>
 
-        <Text style={baseStyles.link} onPress={() => this.props.nav.linkTo('about')}>
-          About Us
-        </Text>
+        <Button
+          raised
+          icon={{ name: 'info-circle', type: 'font-awesome' }}
+          title="Go to About Us"
+          onPress={() => this.props.nav.linkTo('about')}
+          buttonStyle={baseStyles.link}
+        />
 
-        <Text style={baseStyles.link} onPress={() => this.props.nav.back()}>
-          &lang; Go Back
-        </Text>
+        <Button
+          raised
+          icon={{ name: 'chevron-left', type: 'font-awesome' }}
+          title="Go Back"
+          onPress={() => this.props.nav.back()}
+          buttonStyle={baseStyles.link}
+        />
       </View>
     )
   }

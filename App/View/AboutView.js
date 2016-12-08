@@ -3,6 +3,7 @@ import {
     View,
     Text
 } from 'react-native'
+import { Button } from 'react-native-elements'
 import baseStyles from '../baseStyles'
 
 export default class AboutView extends React.Component {
@@ -14,9 +15,13 @@ export default class AboutView extends React.Component {
           About Us
         </Text>
 
-        <Text style={baseStyles.link} onPress={() => this.props.nav.back()}>
-          &lang; Go Back
-        </Text>
+        <Button
+          raised
+          icon={{ name: 'chevron-left', type: 'font-awesome' }}
+          title="Go Back"
+          onPress={() => this.props.nav.back()}
+          buttonStyle={baseStyles.link}
+        />
       </View>
     )
   }

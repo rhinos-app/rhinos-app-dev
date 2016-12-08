@@ -21,8 +21,8 @@ export default class MainView extends React.Component {
           To get started, edit App.js
         </Text>
         <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          { Platform.OS !== 'web' ? 'Cmd+D or shake for dev menu': '' }
+          Press Cmd+R to reload{'\n'}
+          { Platform.OS !== 'web' ? 'Cmd+D or shake for dev menu' : '' }
         </Text>
 
         <Button
