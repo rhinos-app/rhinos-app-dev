@@ -54,9 +54,7 @@ export default class MainView extends React.Component {
 
 const styles = StyleSheet.create({
   view: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'stretch',
     backgroundColor: '#F5FCFF',
   },
   welcome: {

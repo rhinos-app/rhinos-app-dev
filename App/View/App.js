@@ -27,8 +27,9 @@ export class App extends Component {
 const styles = StyleSheet.create({
   view: {
     flex: 1,
+    flexDirection: 'column',
     justifyContent: 'flex-start',
-    alignItems: 'center',
+    alignItems: 'stretch',
     backgroundColor: '#F5FCFF',
     paddingTop: 50
   }
