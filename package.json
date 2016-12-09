@@ -6,10 +6,11 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "web": "webpack-dev-server --port 3000 --config web/webpack.config.js -d --inline --hot --colors",
-    "build-web": "webpack --colors --display-error-details --config web/webpack.config.js"
+    "build-web": "webpack --colors --display-error-details --config web/webpack.config.js",
+    "serve-web-background": "http-server web/static/ -p 8300 > ~/rhinos-app.log 2>&1 &"
   },
   "dependencies": {
-    "dummy-pkg": "0.0.1",
+    "http-server": "^0.9.0",
     "react": "~15.3.2",
     "react-native": "0.39.0",
     "react-native-animatable": "^1.1.0",
