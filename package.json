@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js -d --inline --hot --colors"
+    "web": "webpack-dev-server --port 3000 --config web/webpack.config.js -d --inline --hot --colors",
+    "build-web": "webpack --colors --display-error-details --config web/webpack.config.js"
   },
   "dependencies": {
     "dummy-pkg": "0.0.1",
@@ -34,7 +35,7 @@
     "json-loader": "^0.5.4",
     "react-test-renderer": "15.4.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.1",
+    "webpack": "^1.14.0",
     "webpack-dev-server": "^1.14.1"
   },
   "jest": {

@@ -6,3 +6,4 @@ ios/build/
 .DS_Store
 *.log
 temp.*
+bundle.js

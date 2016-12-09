@@ -23,6 +23,7 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
 ```
 $ npm install -g yarn
 $ npm install -g react-native-cli
+$ npm install -g http-server
 ```
 
 ## BUILD & RUN
@@ -38,14 +39,19 @@ $ npm install   (yarn is not working yet due to a PR)
 ### Run on Web
 
 ```
-$ npm run web
+DEV mode:
+  $ npm run web
+  
+PRODUCTION mode:
+  $ npm run build-web
+  $ http-server ./web/static/
 ```
 
 ### Run on Android
 
   * open Android Emulator
   * in Terminal, make sure you have ANDROID_HOME=/Users/username/Library/Android/sdk
-  * run in another Terminal: $ npm start
+  * run in another Terminal: $ npm start -- --reset-cache
 
 ``` 
     $ react-native run-android
@@ -54,7 +60,7 @@ $ npm run web
 ### Run on iOS
 
   * open iOS Emulator
-  * run in another Terminal: $ npm start
+  * run in another Terminal: $ npm start -- --reset-cache
 
 ```    
     $ react-native run-ios

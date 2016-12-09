@@ -16,7 +16,7 @@ export class App extends Component {
     return (
       <View style={styles.view}>
         <SimpleNavigator views={{
-          index: MainView,
+          initialView: MainView,
           contactUs: ContactUsView,
           about: AboutView
         }} />

@@ -1,8 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const DIRECTORY = path.join(__dirname)
-
 module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'src')
@@ -44,6 +42,7 @@ module.exports = {
     ]
   },
   output: {
+    path: path.join(__dirname, '../web/static'),
     filename: 'bundle.js'
   },
   plugins: [

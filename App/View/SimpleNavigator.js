@@ -34,8 +34,8 @@ export default class SimpleNavigator extends React.Component {
       this.currentComp = this.props.views[ this.state.currentView ]
       this.startViewAnimation()
     } else {
-      this.history = ['index']
-      this.currentComp = this.props.views[ 'index' ]
+      this.history = ['initialView']
+      this.currentComp = this.props.views['initialView']
     }
 
     return (
