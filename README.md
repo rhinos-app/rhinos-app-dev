@@ -11,11 +11,11 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
 
 ## FEATURES: :star2:
 
-  * :iphone: :computer: Runs on Android, iOS, Web (can run as a Windows/MacOS/Linux desktop app with [Electron](https://github.com/electron/electron))
+  * :iphone: :computer: Runs on Android, iOS, Web (can also run as a Windows/MacOS/Linux desktop app with [Electron](https://github.com/electron/electron))
   * [SimpleNavigator](App/View/SimpleNavigator.js) with transition Fx (using Animated)
   * [React-native-gifted-form](https://github.com/FaridSafi/react-native-gifted-form)
   * [React-native-elements](https://github.com/react-native-community/react-native-elements), react-native-vector-icons (FontAwesome)
-  * Miscellaneous features: ESLint, Webpack
+  * Miscellaneous features: yarn, ESLint, Webpack
 
 ## PREREQUISITES:
 
@@ -34,7 +34,7 @@ $ npm install -g react-native-cli
 ```
 $ git clone <URL>
 $ cd rhinos-app-dev
-$ npm install   (yarn is not working yet due to a PR)
+$ npm install   (or $ yarn)
 ```
 
 ### Run on Web
