@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
-import { StyleSheet, View, Platform } from 'react-native'
-import WebInit from 'dummy-pkg' // web only (webpack's alias to webInit.js) - #TODO: improve this.
+import { StyleSheet, View } from 'react-native'
+import AppInit from 'utils/init' // Webpack alias for Web mode: 'init.web.js'
 
 import SimpleNavigator from './SimpleNavigator'
 import MainView from './MainView'

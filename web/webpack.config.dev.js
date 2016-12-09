@@ -25,7 +25,11 @@ module.exports = {
             path.resolve(__dirname, "../")
         ],
         loader: 'babel-loader',
-        query: { cacheDirectory: true }
+        query: {
+          cacheDirectory: true,
+          babelrc: false, // ignore .babelrc because we can't use both "module-resolver" & webpack resolve
+          presets: ['react-native']
+        }
       },
       {
         test: /\.(gif|jpe?g|png|svg)$/,
@@ -50,9 +54,12 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin()
   ],
   resolve: {
+    root: {
+      modulesDirectories: ['../node_modules', '../App']
+    },
     alias: {
       'react-native': 'react-native-web',
-      'dummy-pkg': path.join(__dirname, '../App/webInit.js') // #TODO: improve this
+      'utils/init': path.join(__dirname, '../App/utils/init.web.js')
     },
     extensions: ['', '.js']
   }

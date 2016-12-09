@@ -1,5 +1,12 @@
 {
   "presets": [
     "react-native"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./App"],
+      "alias": {
+      }
+    }]
   ]
 }
