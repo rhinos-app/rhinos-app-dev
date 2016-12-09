@@ -4,6 +4,8 @@
 
 Rhinos-app is a react-native app which uses [react-native-web](https://github.com/necolas/react-native-web) to achieve cross-platform design. 
 
+[Live Demo: web version](http://45.56.126.43:8300/)
+
 *Demo video:*
 [![Demo video](docs/assets/demo.png)](https://www.youtube.com/watch?v=tJRVfUz6vbI)
 
