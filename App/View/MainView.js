@@ -27,6 +27,7 @@ export default class MainView extends React.Component {
 
         <Button
           raised
+          backgroundColor="#008a7d"
           icon={{ name: 'paper-plane-o', type: 'font-awesome' }}
           title="Go to Contact Us"
           onPress={() => this.props.nav.linkTo('contactUs')}
