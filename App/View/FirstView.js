@@ -26,11 +26,16 @@ export default class FirstView extends React.Component {
   }
 
   renderTabBarTop = (props) => {
+    const styleObj = {}
+    if (Platform.OS === 'web') {
+      styleObj.width = '102%' // fix an UI issue on web
+    }
+
     return <TabBarTop {...props}
                       tabStyle={{ backgroundColor: baseStyles.BRAND_LIGHT, opacity: 1, marginBottom: 2 }}
                       indicatorStyle={{ backgroundColor: baseStyles.BRAND }}
                       pressColor="#fff"
-                      labelStyle={{ color: '#596698' }} />
+                      labelStyle={{ color: '#596698' }} style={styleObj} />
   }
 
   renderTabScene = ({ route }) => {
@@ -96,8 +101,7 @@ export default class FirstView extends React.Component {
 
 const styles = StyleSheet.create({
   tabContainer: {
-    flex: 1,
-    backgroundColor: '#F5FCFF'
+    flex: 1
   },
   tabView: {
     flex: 1,
