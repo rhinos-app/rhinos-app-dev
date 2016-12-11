@@ -17,7 +17,7 @@ export default class ContactUsView extends React.Component {
 
         <Button
           raised
-          backgroundColor="#008a7d"
+          backgroundColor={baseStyles.brand}
           icon={{ name: 'info-circle', type: 'font-awesome' }}
           title="Go to About Us"
           onPress={() => this.props.nav.linkTo('about')}

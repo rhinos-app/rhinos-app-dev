@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "react": "~15.3.2",
+    "react-addons-shallow-compare": "^15.4.1",
     "react-native": "0.39.0",
     "react-native-animatable": "^1.1.0",
     "react-native-elements": "^0.7.1",
     "react-native-gifted-form": "^0.0.13",
     "react-native-navbar": "^1.5.4",
+    "react-native-tab-view": "0.0.40",
     "react-native-vector-icons": "^3.0.0",
     "react-native-web": "0.0.55",
     "serve": "^1.4.0"

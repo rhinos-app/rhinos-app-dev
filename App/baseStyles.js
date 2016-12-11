@@ -2,7 +2,7 @@ import {
   StyleSheet
 } from 'react-native'
 
-export default StyleSheet.create({
+const style = StyleSheet.create({
   view: {
     padding: 10,
     paddingTop: 10,
@@ -13,5 +13,14 @@ export default StyleSheet.create({
   },
   link: {
     marginTop: 20
+  },
+  center: {
+    textAlign: 'center'
   }
 })
+
+style.brand = '#27c1e4'
+style.brandDark = '#202d5c'
+style.brandLight = '#ebeffb'
+
+export default style

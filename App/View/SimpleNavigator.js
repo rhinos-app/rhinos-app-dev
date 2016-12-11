@@ -39,9 +39,7 @@ export default class SimpleNavigator extends React.Component {
     }
 
     return (
-      <Animated.View
-        style={{ opacity: this.state.fadeFxValue }}
-      >
+      <Animated.View style={{ flex: 1, opacity: this.state.fadeFxValue }}>
         <this.currentComp nav={this} />
       </Animated.View>
     )

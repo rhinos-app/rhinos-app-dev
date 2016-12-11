@@ -1,19 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
-import { SideMenu } from 'react-native-elements'
+import { SideMenu, Button } from 'react-native-elements'
 import NavigationBar from 'react-native-navbar'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 import AppMenu from './AppMenu'
+import FirstView from './FirstView'
 import SimpleNavigator from './SimpleNavigator'
-import MainView from './MainView'
 import ContactUsView from './ContactUsView'
 import AboutView from './AboutView'
+import baseStyles from '../baseStyles'
 import AppInit from 'utils/init' // Webpack alias for Web mode: 'init.web.js'
 
 export class App extends Component {
-  state = { toggled: false }
+  state = {
+    toggled: false
+  }
 
   toggleSideMenu = (showFlag) => {
     this.setState({
@@ -24,7 +27,7 @@ export class App extends Component {
   render () {
     const leftButtonConfig = (
       <TouchableOpacity onPress={() => this.toggleSideMenu()} style={{ margin: 5 }}>
-        <Icon name="bars" size={30} color="#008a7d" />
+        <Icon name="bars" size={30} color={baseStyles.brand} />
       </TouchableOpacity>
     )
     const titleConfig = { title: 'Rhinos-app' }
@@ -35,11 +38,10 @@ export class App extends Component {
         toggled={this.state.toggled}
       >
         <View style={styles.view}>
-          <NavigationBar
-            title={titleConfig}
-            leftButton={leftButtonConfig} />
+          <NavigationBar title={titleConfig} leftButton={leftButtonConfig} />
+
           <SimpleNavigator views={{
-                             initialView: MainView,
+                             initialView: FirstView,
                              contactUs: ContactUsView,
                              about: AboutView
                            }}
@@ -54,9 +56,6 @@ export class App extends Component {
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#fff'
   }
 })
