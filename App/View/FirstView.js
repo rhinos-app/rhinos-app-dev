@@ -25,7 +25,11 @@ export default class FirstView extends React.Component {
   }
 
   _renderHeader = (props) => {
-    return <TabBarTop {...props} tabStyle={{ backgroundColor: baseStyles.brandLight }} labelStyle={{ color: '#596698' }} />
+    return <TabBarTop {...props}
+                      tabStyle={{ backgroundColor: baseStyles.brandLight, opacity: 1, marginBottom: 2 }}
+                      indicatorStyle={{ backgroundColor: baseStyles.brand }}
+                      pressColor="#fff"
+                      labelStyle={{ color: '#596698' }} />
   }
 
   _renderScene = ({ route }) => {

@@ -33,19 +33,17 @@ export class App extends Component {
     const titleConfig = { title: 'Rhinos-app' }
 
     return (
-      <SideMenu
-        MenuComponent={<AppMenu />}
-        toggled={this.state.toggled}
-      >
+      <SideMenu MenuComponent={<AppMenu nav={this.refs.nav} onItemPress={() => this.toggleSideMenu(false)} />}
+                toggled={this.state.toggled}>
         <View style={styles.view}>
-          <NavigationBar title={titleConfig} leftButton={leftButtonConfig} />
+          <NavigationBar style={{ backgroundColor: baseStyles.brandLight }} title={titleConfig} leftButton={leftButtonConfig} />
 
-          <SimpleNavigator views={{
+          <SimpleNavigator ref="nav"
+                           views={{
                              initialView: FirstView,
                              contactUs: ContactUsView,
                              about: AboutView
                            }}
-                           onClick={() => this.toggleSideMenu(false)}
           />
         </View>
       </SideMenu>

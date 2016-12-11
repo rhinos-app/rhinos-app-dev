@@ -4,8 +4,23 @@ import { List, ListItem } from 'react-native-elements'
 import baseStyles from '../baseStyles'
 
 export default class AppMenu extends React.Component {
+
+  onItemPress = (item) => {
+    this.props.nav.linkTo(item.link)
+    if (this.props.onItemPress) {
+      this.props.onItemPress(item)
+    }
+  }
+
   render () {
-    const list = [{ name: 'Test Menu', subtitle: 'This is a dummy menu', avatar_url: 'http://yahoo.com' }]
+    const list = [
+      {
+        name: 'Home', subtitle: 'Home screen', link: 'initialView'
+      }, {
+        name: 'Contact Us', subtitle: 'Contact Us screen', link: 'contactUs'
+      }, {
+        name: 'About Us', subtitle: 'About Us screen', link: 'about'
+      }]
     return (
       <View style={{ flex: 1, backgroundColor: baseStyles.brandDark, paddingTop: 50 }}>
         <List containerStyle={{ marginBottom: 20 }}>
@@ -13,8 +28,7 @@ export default class AppMenu extends React.Component {
             list.map((item, i) => (
               <ListItem
                 roundAvatar
-                onPress={() => console.log('something')}
-                avatar={{ uri: item.avatar_url }}
+                onPress={() => this.onItemPress(item)}
                 key={i}
                 title={item.name}
                 subtitle={item.subtitle} />
