@@ -17,7 +17,7 @@ export default class ContactUsView extends React.Component {
 
         <Button
           raised
-          backgroundColor={baseStyles.brand}
+          backgroundColor={baseStyles.BRAND}
           icon={{ name: 'info-circle', type: 'font-awesome' }}
           title="Go to About Us"
           onPress={() => this.props.nav.linkTo('about')}
@@ -27,8 +27,8 @@ export default class ContactUsView extends React.Component {
         <Button
           raised
           backgroundColor={'#fff'}
-          color={baseStyles.brand}
-          icon={{ name: 'chevron-left', type: 'font-awesome', color: baseStyles.brand }}
+          color={baseStyles.BRAND}
+          icon={{ name: 'chevron-left', type: 'font-awesome', color: baseStyles.BRAND }}
           title="Go Back"
           onPress={() => this.props.nav.back()}
           buttonStyle={baseStyles.link}

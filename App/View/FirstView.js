@@ -17,35 +17,40 @@ export default class FirstView extends React.Component {
     routes: [
       { key: '1', title: 'First' },
       { key: '2', title: 'Second' },
+      { key: '3', title: 'Third' }
     ]
   }
 
-  _handleChangeTab = (index) => {
+  onTabChange = (index) => {
     this.setState({ index })
   }
 
-  _renderHeader = (props) => {
+  renderTabBarTop = (props) => {
     return <TabBarTop {...props}
-                      tabStyle={{ backgroundColor: baseStyles.brandLight, opacity: 1, marginBottom: 2 }}
-                      indicatorStyle={{ backgroundColor: baseStyles.brand }}
+                      tabStyle={{ backgroundColor: baseStyles.BRAND_LIGHT, opacity: 1, marginBottom: 2 }}
+                      indicatorStyle={{ backgroundColor: baseStyles.BRAND }}
                       pressColor="#fff"
                       labelStyle={{ color: '#596698' }} />
   }
 
-  _renderScene = ({ route }) => {
+  renderTabScene = ({ route }) => {
     switch (route.key) {
       case '1':
-        return <View style={[ styles.page, { backgroundColor: '#F5FCFF' } ]}>
+        return <View style={[ styles.tabView, { backgroundColor: baseStyles.BG } ]}>
           <Text style={baseStyles.center}>
-            Welcome to React Native for {Platform.OS}!{'\n'}
-            To get started, edit App.js{'\n\n'}
+            Welcome to React Native for {Platform.OS}!
+          </Text>
+          <Text style={baseStyles.center}>
+            To get started, edit App.js
+          </Text>
+          <Text style={baseStyles.center}>
             Press Cmd+R to reload{'\n'}
             { Platform.OS !== 'web' ? 'Cmd+D or shake for dev menu' : '' }
           </Text>
 
           <Button
             raised
-            backgroundColor={baseStyles.brand}
+            backgroundColor={baseStyles.BRAND}
             icon={{ name: 'paper-plane-o', type: 'font-awesome' }}
             title="Go to Contact Us"
             onPress={() => this.props.nav.linkTo('contactUs')}
@@ -68,7 +73,9 @@ export default class FirstView extends React.Component {
           </GiftedForm>
         </View>
       case '2':
-        return <View style={[ styles.page, { backgroundColor: '#a4caff' } ]} />
+        return <View style={[ styles.tabView, { backgroundColor: baseStyles.BRAND } ]} />
+      case '3':
+        return <View style={[ styles.tabView, { backgroundColor: '#a4caff' } ]} />
       default:
         return null;
     }
@@ -77,25 +84,22 @@ export default class FirstView extends React.Component {
   render () {
     return (
       <TabViewAnimated
-        style={styles.container}
+        style={styles.tabContainer}
         navigationState={this.state}
-        renderScene={this._renderScene}
-        renderHeader={this._renderHeader}
-        onRequestChangeTab={this._handleChangeTab}
+        renderScene={this.renderTabScene}
+        renderHeader={this.renderTabBarTop}
+        onRequestChangeTab={this.onTabChange}
       />
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  tabContainer: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
     backgroundColor: '#F5FCFF'
   },
-  page: {
+  tabView: {
     flex: 1,
     alignItems: 'stretch',
     paddingTop: 20

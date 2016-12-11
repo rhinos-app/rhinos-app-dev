@@ -27,7 +27,7 @@ export class App extends Component {
   render () {
     const leftButtonConfig = (
       <TouchableOpacity onPress={() => this.toggleSideMenu()} style={{ margin: 5 }}>
-        <Icon name="bars" size={30} color={baseStyles.brand} />
+        <Icon name="bars" size={30} color={baseStyles.BRAND} />
       </TouchableOpacity>
     )
     const titleConfig = { title: 'Rhinos-app' }
@@ -36,7 +36,7 @@ export class App extends Component {
       <SideMenu MenuComponent={<AppMenu nav={this.refs.nav} onItemPress={() => this.toggleSideMenu(false)} />}
                 toggled={this.state.toggled}>
         <View style={styles.view}>
-          <NavigationBar style={{ backgroundColor: baseStyles.brandLight }} title={titleConfig} leftButton={leftButtonConfig} />
+          <NavigationBar style={{ backgroundColor: baseStyles.BRAND_LIGHT }} title={titleConfig} leftButton={leftButtonConfig} />
 
           <SimpleNavigator ref="nav"
                            views={{

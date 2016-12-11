@@ -18,8 +18,8 @@ export default class AboutView extends React.Component {
         <Button
           raised
           backgroundColor={'#fff'}
-          color={baseStyles.brand}
-          icon={{ name: 'chevron-left', type: 'font-awesome', color: baseStyles.brand }}
+          color={baseStyles.BRAND}
+          icon={{ name: 'chevron-left', type: 'font-awesome', color: baseStyles.BRAND }}
           title="Go Back"
           onPress={() => this.props.nav.back()}
           buttonStyle={baseStyles.link}

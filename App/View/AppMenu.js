@@ -22,7 +22,7 @@ export default class AppMenu extends React.Component {
         name: 'About Us', subtitle: 'About Us screen', link: 'about'
       }]
     return (
-      <View style={{ flex: 1, backgroundColor: baseStyles.brandDark, paddingTop: 50 }}>
+      <View style={{ flex: 1, backgroundColor: baseStyles.BRAND_DARK, paddingTop: 50 }}>
         <List containerStyle={{ marginBottom: 20 }}>
           {
             list.map((item, i) => (

@@ -16,7 +16,9 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
   * [React-native-gifted-form](https://github.com/FaridSafi/react-native-gifted-form)
   * [React-native-elements](https://github.com/react-native-community/react-native-elements), react-native-vector-icons (FontAwesome), Button, SideMenu, List, etc.
   * Components: react-native-navbar, react-native-tab-view, etc.
-  * Miscellaneous features: yarn, ESLint, Webpack
+  * Miscellaneous features: yarn, ESLint, Webpack, baseStyles
+  
+*It does not have X, Y, Z libs?* - We adopted [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle but feel free to sprinkle some more pixie dust (Redux, MobX, etc.) to bake your project :)
 
 ## PREREQUISITES:
 
