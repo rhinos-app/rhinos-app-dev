@@ -43,6 +43,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, '../web/static/build'),
+    publicPath: '/build/',
     filename: 'bundle.js'
   },
   plugins: [
