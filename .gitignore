@@ -3,6 +3,7 @@ node_modules/
 android/build/
 android/app/build/
 ios/build/
+web/static/build/
 .DS_Store
 *.log
 temp.*

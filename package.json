@@ -1,12 +1,13 @@
 {
   "name": "rhinosapp",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js -d --inline --hot --colors",
-    "build-web": "webpack --colors --display-error-details --config web/webpack.config.prod.js",
+    "clean-web": "rm -Rf web/static/build/",
+    "build-web": "npm run clean-web && webpack --colors --display-error-details --config web/webpack.config.prod.js",
     "serve-web-background": "serve --compress --port 8300 web/static/ > ~/rhinos-app.log 2>&1 &"
   },
   "dependencies": {

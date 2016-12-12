@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, 'static')
+    contentBase: path.join(__dirname, 'static/build')
   },
   entry: [
     path.join(__dirname, '../index.web.js')
@@ -42,7 +42,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(__dirname, '../web/static'),
+    path: path.join(__dirname, '../web/static/build'),
     filename: 'bundle.js'
   },
   plugins: [
