@@ -30,7 +30,6 @@ export default class FirstView extends React.Component {
     if (Platform.OS === 'web') {
       styleObj.width = '102%' // fix an UI issue on web
     }
-
     return <TabBarTop {...props}
                       tabStyle={{ backgroundColor: baseStyles.BRAND_LIGHT, opacity: 1, marginBottom: 2 }}
                       indicatorStyle={{ backgroundColor: baseStyles.BRAND }}
