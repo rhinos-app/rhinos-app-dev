@@ -6,7 +6,7 @@ import NavigationBar from 'react-native-navbar'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 import AppMenu from './AppMenu'
-import FirstView from './FirstView'
+import MainView from './MainView'
 import SimpleNavigator from './SimpleNavigator'
 import ContactUsView from './ContactUsView'
 import AboutView from './AboutView'
@@ -40,7 +40,7 @@ export class App extends Component {
 
           <SimpleNavigator ref="nav"
                            views={{
-                             initialView: FirstView,
+                             initialView: MainView,
                              contactUs: ContactUsView,
                              about: AboutView
                            }}

@@ -11,7 +11,7 @@ import baseStyles from '../baseStyles'
 
 const { GiftedForm } = require('react-native-gifted-form')
 
-export default class FirstView extends React.Component {
+export default class MainView extends React.Component {
   state = {
     index: 0,
     routes: [
