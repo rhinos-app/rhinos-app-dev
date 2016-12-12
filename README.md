@@ -18,7 +18,7 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
 *Demo video:*
 [![Demo video](docs/assets/demo.png)](https://www.youtube.com/watch?v=tJRVfUz6vbI)
 
-![Demo video](docs/assets/demo-ios.gif)
+<img src="docs/assets/demo-ios.gif" width="240">
 
 ## PREREQUISITES:
   * Android SDK
