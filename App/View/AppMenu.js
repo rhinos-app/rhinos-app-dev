@@ -1,12 +1,10 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { List, ListItem } from 'react-native-elements'
-import baseStyles from '../baseStyles'
 
 export default class AppMenu extends React.Component {
 
   onItemPress = (item) => {
-    this.props.nav.linkTo(item.link)
     if (this.props.onItemPress) {
       this.props.onItemPress(item)
     }
@@ -22,7 +20,7 @@ export default class AppMenu extends React.Component {
         name: 'About Us', subtitle: 'About Us screen', link: 'about'
       }]
     return (
-      <View style={{ flex: 1, backgroundColor: baseStyles.BRAND_DARK, paddingTop: 50 }}>
+      <View style={[ styles.menu, this.props.style ]}>
         <List containerStyle={{ marginBottom: 20 }}>
           {
             list.map((item, i) => (
@@ -39,3 +37,10 @@ export default class AppMenu extends React.Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  menu: {
+    flex: 1,
+    paddingTop: 50
+  }
+})

@@ -24,6 +24,11 @@ export class App extends Component {
     })
   }
 
+  appMenuItemClick = (menuItem) => {
+    this.toggleSideMenu(false)
+    this.refs.nav.linkTo(menuItem.link)
+  }
+
   render () {
     const leftButtonConfig = (
       <TouchableOpacity onPress={() => this.toggleSideMenu()} style={{ margin: 5 }}>
@@ -33,7 +38,7 @@ export class App extends Component {
     const titleConfig = { title: 'Rhinos-app' }
 
     return (
-      <SideMenu MenuComponent={<AppMenu nav={this.refs.nav} onItemPress={() => this.toggleSideMenu(false)} />}
+      <SideMenu MenuComponent={<AppMenu onItemPress={this.appMenuItemClick} style={{ backgroundColor: baseStyles.BRAND_DARK }} />}
                 toggled={this.state.toggled}>
         <View style={styles.view}>
           <NavigationBar style={{ backgroundColor: baseStyles.BRAND_LIGHT }} title={titleConfig} leftButton={leftButtonConfig} />
