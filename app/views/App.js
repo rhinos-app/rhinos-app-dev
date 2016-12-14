@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
-import { SideMenu, Button } from 'react-native-elements'
+import { SideMenu } from 'react-native-elements'
 import NavigationBar from 'react-native-navbar'
 import Icon from 'react-native-vector-icons/FontAwesome'
 

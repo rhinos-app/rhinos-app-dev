@@ -19,7 +19,7 @@ module.exports = {
         // exclude node_modules except ES6 modules:   #TODO: use include for whitelist.
         exclude: /node_modules\/(?!(react-native-|apsl-react-native)).*/,
         include: [
-            path.resolve(__dirname, "../App"),
+            path.resolve(__dirname, "../app"),
             path.resolve(__dirname, "../")
         ],
         loader: 'babel-loader',
@@ -55,11 +55,11 @@ module.exports = {
   ],
   resolve: {
     root: {
-      modulesDirectories: ['../node_modules', '../App']
+      modulesDirectories: ['../node_modules', '../app']
     },
     alias: {
       'react-native': 'react-native-web',
-      'utils/init': path.join(__dirname, '../App/utils/init.web.js')
+      'utils/init': path.join(__dirname, '../app/utils/init.web.js')
     },
     extensions: ['', '.js']
   }
