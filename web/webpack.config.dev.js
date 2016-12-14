@@ -54,9 +54,10 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin()
   ],
   resolve: {
-    root: {
-      modulesDirectories: ['../node_modules', '../app']
-    },
+    root: [
+      path.resolve(__dirname, "../node_modules"),
+      path.resolve(__dirname, "../app")
+    ],
     alias: {
       'react-native': 'react-native-web',
       'utils/init': path.join(__dirname, '../app/utils/init.web.js')
