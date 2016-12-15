@@ -1,5 +1,7 @@
 <img src="http://cdn.shopify.com/s/files/1/0249/0754/products/Rhino_1.jpg?v=1470910706" width="100">
 
+[![CircleCI](https://circleci.com/gh/rhinos-app/rhinos-app-dev.svg?style=svg)](https://circleci.com/gh/rhinos-app/rhinos-app-dev)
+
 # Rhinos-app
 Rhinos-app is a react-native app which uses [react-native-web](https://github.com/necolas/react-native-web) to achieve cross-platform design. 
 
