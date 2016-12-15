@@ -1,6 +1,6 @@
 {
   "name": "rhinosapp",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "repository": "https://github.com/rhinos-app/rhinos-app-dev.git",
   "url": "https://github.com/rhinos-app",
   "description": "Rhinos-app is a react-native app which uses react-native-web to achieve cross-platform design.",
@@ -21,7 +21,8 @@
     "build-web": "npm run clean-web && webpack --colors --display-error-details --config web/webpack.config.prod.js",
     "serve-web-background": "serve --compress --port 8300 web/static/ > ~/rhinos-app.log 2>&1 &",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "commit": "commit-wizard"
   },
   "dependencies": {
     "react": "15.3.2",
@@ -56,6 +57,7 @@
     "jest": "^17.0.3",
     "jest-react-native": "^17.1.0",
     "json-loader": "^0.5.4",
+    "pre-git": "^3.12.0",
     "react-addons-test-utils": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-test-renderer": "^15.4.1",
@@ -71,6 +73,18 @@
     ],
     "moduleNameMapper": {
       "react-native": "<rootDir>/node_modules/react-native-web"
+    }
+  },
+  "config": {
+    "pre-git": {
+      "commit-msg": "conventional",
+      "pre-commit": [
+        "npm test",
+        "npm run lint"
+      ],
+      "pre-push": [],
+      "post-commit": [],
+      "post-merge": []
     }
   }
 }

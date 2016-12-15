@@ -2,9 +2,11 @@
 node_modules/
 android/build/
 android/app/build/
+taskArtifacts
 ios/build/
 web/static/build/
 .DS_Store
+npm-debug.log
 *.log
 temp.*
 bundle.js
