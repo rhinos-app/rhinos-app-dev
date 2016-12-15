@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const devConfig = require('./webpack.config.dev')
 
-var prodConfig = {
+const prodConfig = {
   target: 'web',
   cache: false,
   debug: false,

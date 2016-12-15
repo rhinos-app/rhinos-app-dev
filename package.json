@@ -1,6 +1,6 @@
 {
   "name": "rhinosapp",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "repository": "https://github.com/rhinos-app/rhinos-app-dev.git",
   "url": "https://github.com/rhinos-app",
   "description": "Rhinos-app is a react-native app which uses react-native-web to achieve cross-platform design.",
@@ -15,6 +15,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
+    "lint": "eslint ./app",
     "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js -d --inline --hot --colors",
     "clean-web": "rm -Rf web/static/build/",
     "build-web": "npm run clean-web && webpack --colors --display-error-details --config web/webpack.config.prod.js",

@@ -410,7 +410,7 @@ babel-code-frame@^6.11.0, babel-code-frame@^6.16.0, babel-code-frame@^6.20.0:
     esutils "^2.0.2"
     js-tokens "^2.0.0"
 
-babel-core@^6.0.0, babel-core@^6.10.4, babel-core@^6.11.4, babel-core@^6.18.0, babel-core@^6.18.2, babel-core@^6.7.2, babel-core@^6.9.1:
+babel-core@^6.0.0, babel-core@^6.11.4, babel-core@^6.18.0, babel-core@^6.18.2, babel-core@^6.7.2, babel-core@^6.9.1:
   version "6.20.0"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.20.0.tgz#ab0d7176d9dea434e66badadaf92237865eab1ec"
   dependencies:
@@ -2203,10 +2203,6 @@ csurf@~1.8.3:
     csrf "~3.0.0"
     http-errors "~1.3.1"
 
-cubic-bezier@=0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/cubic-bezier/-/cubic-bezier-0.1.2.tgz#d4970942002e45372e0aa92db657e39eaf6824d7"
-
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -2420,14 +2416,6 @@ encoding@^0.1.11:
   dependencies:
     iconv-lite "~0.4.13"
 
-enhanced-resolve@^0.8.4:
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-0.8.6.tgz#0806a6b643949aa79f879e5adc6db8bb2b77f35f"
-  dependencies:
-    graceful-fs "^3.0.5"
-    memory-fs "^0.2.0"
-    tapable "^0.1.8"
-
 enhanced-resolve@~0.9.0:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-0.9.1.tgz#4d6e689b3725f86090927ccc86cd9f1635b89e2e"
@@ -2583,12 +2571,24 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint-config-standard:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-6.2.1.tgz#d3a68aafc7191639e7ee441e7348739026354292"
+
+eslint-plugin-promise:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.4.0.tgz#6ba9048c2df57be77d036e0c68918bc9b4fc4195"
+
 eslint-plugin-react@^6.7.1:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-6.8.0.tgz#741ab5438a094532e5ce1bbb935d6832356f492d"
   dependencies:
     doctrine "^1.2.2"
     jsx-ast-utils "^1.3.4"
+
+eslint-plugin-standard:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-2.0.1.tgz#3589699ff9c917f2c25f76a916687f641c369ff3"
 
 eslint@^3.11.1:
   version "3.12.0"
@@ -3158,12 +3158,6 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
-graceful-fs@^3.0.5:
-  version "3.0.11"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-3.0.11.tgz#7613c778a1afea62f25c630a086d7f3acbbdd818"
-  dependencies:
-    natives "^1.1.0"
-
 graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
@@ -3471,12 +3465,6 @@ interpret@^1.0.0:
 invariant@^2.2.0, invariant@2.x.x:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
-  dependencies:
-    loose-envify "^1.0.0"
-
-invariant@=2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.1.tgz#b097010547668c7e337028ebe816ebe36c8a8d54"
   dependencies:
     loose-envify "^1.0.0"
 
@@ -3995,15 +3983,6 @@ jest-util@^17.0.2:
     jest-mock "^17.0.2"
     mkdirp "^0.5.1"
 
-jest-webpack:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/jest-webpack/-/jest-webpack-0.2.1.tgz#3a8abb7035a433491a6a85f03f6b7b6448f85e38"
-  dependencies:
-    enhanced-resolve "^0.8.4"
-    memory-fs "^0.2.0"
-    pkginfo "^0.3.0"
-    webpack "^1.5.3"
-
 jodid25519@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
@@ -4045,7 +4024,7 @@ jsbn@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.0.tgz#650987da0dd74f4ebf5a11377a2aa2d273e97dfd"
 
-jsdom, jsdom@^9.8.1:
+jsdom@^9.8.1:
   version "9.8.3"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-9.8.3.tgz#fde29c109c32a1131e0b6c65914e64198f97c370"
   dependencies:
@@ -4147,10 +4126,6 @@ jsx-ast-utils@^1.3.4:
 keycode@^2.1.1:
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/keycode/-/keycode-2.1.7.tgz#7b9255919f6cff562b09a064d222dca70b020f5c"
-
-keymirror@=0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/keymirror/-/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
 
 kind-of@^3.0.2:
   version "3.1.0"
@@ -4728,10 +4703,6 @@ nan@^2.3.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
-natives@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/natives/-/natives-1.1.0.tgz#e9ff841418a6b2ec7a495e939984f78f163e6e31"
-
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -5137,10 +5108,6 @@ pegjs@0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/pegjs/-/pegjs-0.9.0.tgz#f6aefa2e3ce56169208e52179dfe41f89141a369"
 
-performance-now@~0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
-
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -5160,10 +5127,6 @@ pkg-dir@^1.0.0:
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-1.0.0.tgz#7a4b508a8d5bb2d629d447056ff4e9c9314cf3d4"
   dependencies:
     find-up "^1.0.0"
-
-pkginfo@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/pkginfo/-/pkginfo-0.3.1.tgz#5b29f6a81f70717142e09e765bbeab97b4f81e21"
 
 plist@^1.2.0, plist@1.2.0:
   version "1.2.0"
@@ -5572,12 +5535,6 @@ querystringify@0.0.x:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-0.0.4.tgz#0cf7f84f9463ff0ae51c4c4b142d95be37724d9c"
 
-raf@=3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/raf/-/raf-3.2.0.tgz#2aba9a09bb70f8c2e9094dc60ace7c374fadec7e"
-  dependencies:
-    performance-now "~0.2.0"
-
 random-bytes@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
@@ -5618,22 +5575,6 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~1.0.4"
 
-react-addons-create-fragment@=15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.1.0.tgz#3c2636ea92dda79994ef078a2f6e9dc7ed6a9eaa"
-
-react-addons-linked-state-mixin@=15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-addons-linked-state-mixin/-/react-addons-linked-state-mixin-15.1.0.tgz#81a91760c17b48019b2d3d65f88860adfb4d204f"
-
-react-addons-perf@=15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-addons-perf/-/react-addons-perf-15.1.0.tgz#d8ca4a96cf001d96f186c24f841a3cc1cc488f15"
-
-react-addons-pure-render-mixin@=15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-addons-pure-render-mixin/-/react-addons-pure-render-mixin-15.1.0.tgz#b8ebac419225b7371148c89d884e2c2c77b7f491"
-
 react-addons-shallow-compare@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.4.1.tgz#b68103dd4d13144cb221065f6021de1822bd435a"
@@ -5641,14 +5582,6 @@ react-addons-shallow-compare@^15.4.1:
 react-addons-test-utils:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.4.1.tgz#1e4caab151bf27cce26df5f9cb714f4fd8359ae1"
-
-react-addons-test-utils@=15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.1.0.tgz#ed9ab2a99ecf04acc99eeea10b308105eb3b183c"
-
-react-addons-update@=15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-addons-update/-/react-addons-update-15.1.0.tgz#86d7361e9b2cbb71cd64f19cd63e85c0b615e99a"
 
 react-clone-referenced-element@^1.0.1:
   version "1.0.1"
@@ -5728,27 +5661,6 @@ react-modal@^1.2.0, react-modal@^1.2.1:
 react-native-animatable@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.1.0.tgz#1ca3e8a00e441979d5711805651ff62a2d3b245a"
-
-react-native-babel-jest:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-native-babel-jest/-/react-native-babel-jest-0.2.0.tgz#687f40de37a1ce37b5f4fafc47d93e217b9591b8"
-  dependencies:
-    babel-core "^6.10.4"
-    babel-preset-react-native "^1.9.0"
-    cubic-bezier "=0.1.2"
-    invariant "=2.2.1"
-    keymirror "=0.1.1"
-    promise "^7.1.1"
-    raf "=3.2.0"
-    react-addons-create-fragment "=15.1.0"
-    react-addons-linked-state-mixin "=15.1.0"
-    react-addons-perf "=15.1.0"
-    react-addons-pure-render-mixin "=15.1.0"
-    react-addons-test-utils "=15.1.0"
-    react-addons-update "=15.1.0"
-    react-timer-mixin "=0.13.3"
-    regenerator-runtime "^0.9.5"
-    warning "=2.1.0"
 
 react-native-button@^1.6.0:
   version "1.7.1"
@@ -5925,7 +5837,7 @@ react-textarea-autosize@^4.0.4:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-4.0.5.tgz#55379f6a6fa575fc87d1b8de2756e57e3b6c995d"
 
-react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3, react-timer-mixin@=0.13.3:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
 
@@ -7065,12 +6977,6 @@ walker@~1.0.5:
   dependencies:
     makeerror "1.0.x"
 
-warning@=2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/warning/-/warning-2.1.0.tgz#21220d9c63afc77a8c92111e011af705ce0c6901"
-  dependencies:
-    loose-envify "^1.0.0"
-
 watch@~0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/watch/-/watch-0.10.0.tgz#77798b2da0f9910d595f1ace5b0c2258521f21dc"
@@ -7130,7 +7036,7 @@ webpack-hot-middleware@^2.13.2:
     querystring "^0.2.0"
     strip-ansi "^3.0.0"
 
-webpack@^1.13.1, webpack@^1.14.0, webpack@^1.5.3:
+webpack@^1.13.1, webpack@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-1.14.0.tgz#54f1ffb92051a328a5b2057d6ae33c289462c823"
   dependencies:

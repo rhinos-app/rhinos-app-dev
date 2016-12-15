@@ -8,5 +8,5 @@ it('renders correctly', () => {
   const tree = shallow(
     <ContactUsView />
   )
-  // console.log(tree.debug())
+  console.log(tree.debug())
 })

@@ -81,7 +81,7 @@ export default class MainView extends React.Component {
       case '3':
         return <View style={[ styles.tabView, { backgroundColor: '#a4caff' } ]} />
       default:
-        return null;
+        return null
     }
   };
 

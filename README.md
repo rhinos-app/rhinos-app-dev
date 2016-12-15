@@ -74,3 +74,5 @@ StoryBook:
 
 ## CONTRIBUTING :raised_hands:
 PRs, Stars :star: and Issue Reporting :beetle: are always welcome :)
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
