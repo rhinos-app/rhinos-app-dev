@@ -50,6 +50,7 @@
     "babel-runtime": "^6.9.2",
     "enzyme": "^2.6.0",
     "eslint": "^3.11.1",
+    "eslint-plugin-jsdoc": "^2.4.0",
     "eslint-plugin-react": "^6.7.1",
     "jest": "^17.0.3",
     "jest-react-native": "^17.1.0",
