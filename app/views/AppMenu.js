@@ -11,7 +11,7 @@ export default class AppMenu extends React.Component {
   }
 
   render () {
-    const list = [
+    const menuItems = [
       {
         name: 'Home', subtitle: 'Home screen', link: 'initialView'
       }, {
@@ -23,7 +23,7 @@ export default class AppMenu extends React.Component {
       <View style={[ styles.menu, this.props.style ]}>
         <List containerStyle={{ marginBottom: 20 }}>
           {
-            list.map((item, i) => (
+            menuItems.map((item, i) => (
               <ListItem
                 roundAvatar
                 onPress={() => this.onItemPress(item)}
