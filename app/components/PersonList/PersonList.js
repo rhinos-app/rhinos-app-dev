@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { List, ListItem } from 'react-native-elements'
 
-export default class AppMenu extends React.Component {
+export default class PersonList extends React.Component {
 
   onItemPress = (item) => {
     if (this.props.onItemPress) {
@@ -11,25 +11,19 @@ export default class AppMenu extends React.Component {
   }
 
   render () {
-    const menuItems = [
-      {
-        name: 'Home', subtitle: 'Home screen', link: 'initialView'
-      }, {
-        name: 'Contact Us', subtitle: 'Contact Us screen', link: 'contactUs'
-      }, {
-        name: 'About Us', subtitle: 'About Us screen', link: 'about'
-      }]
     return (
       <View style={[ styles.main, this.props.style ]}>
-        <List containerStyle={{ marginBottom: 20 }}>
+        <List containerStyle={{ marginTop: 0 }}>
           {
-            menuItems.map((item, i) => (
+            this.props.data.map((item, i) => (
               <ListItem
                 roundAvatar
+                avatar={{ uri: item.avatarUrl }}
                 onPress={() => this.onItemPress(item)}
                 key={i}
-                title={item.name}
-                subtitle={item.subtitle} />
+                title={`${item.firstName} ${item.middleName ? item.middleName + ' ' : ''}${item.lastName}`}
+                subtitle={item.bio}
+              />
             ))
           }
         </List>
@@ -40,7 +34,6 @@ export default class AppMenu extends React.Component {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
-    paddingTop: 50
+    flex: 1
   }
 })

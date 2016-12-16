@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 import React, { Component } from 'react'
 import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import { SideMenu } from 'react-native-elements'

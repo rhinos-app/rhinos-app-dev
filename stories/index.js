@@ -3,6 +3,8 @@ import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from './Button'
 import Welcome from './Welcome'
 import AppMenu from '../app/views/AppMenu'
+import PersonList from '../app/components/PersonList/PersonList'
+import { MockData } from '../app/utils'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -18,6 +20,11 @@ storiesOf('Button', module)
   ))
 
 storiesOf('AppMenu', module)
-  .add('to Storybook', () => (
+  .add('Example', () => (
     <AppMenu />
   ))
+
+storiesOf('PersonList', module)
+  .add('Example', () => {
+    return <PersonList data={MockData.PersonArray} onPress={(item) => action('pressed')} />
+  })

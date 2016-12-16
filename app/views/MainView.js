@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from 'react'
 import {
   StyleSheet,
@@ -7,6 +8,8 @@ import {
 } from 'react-native'
 import { Button } from 'react-native-elements'
 import { TabViewAnimated, TabBarTop } from 'react-native-tab-view'
+import { PersonList } from 'components'
+import { MockData } from 'utils'
 import baseStyles from '../baseStyles'
 
 const { GiftedForm } = require('react-native-gifted-form')
@@ -40,7 +43,7 @@ export default class MainView extends React.Component {
   renderTabScene = ({ route }) => {
     switch (route.key) {
       case '1':
-        return <View style={[ styles.tabView, { backgroundColor: baseStyles.BG } ]}>
+        return <View style={[ styles.tabView, { backgroundColor: baseStyles.BG, paddingTop: 20 } ]}>
           <Text style={baseStyles.center}>
             Welcome to React Native for {Platform.OS}!
           </Text>
@@ -77,7 +80,11 @@ export default class MainView extends React.Component {
           </GiftedForm>
         </View>
       case '2':
-        return <View style={[ styles.tabView, { backgroundColor: baseStyles.BRAND } ]} />
+        return (
+          <View style={[ styles.tabView, { backgroundColor: baseStyles.BRAND } ]}>
+            <PersonList data={MockData.PersonArray} />
+          </View>
+        )
       case '3':
         return <View style={[ styles.tabView, { backgroundColor: '#a4caff' } ]} />
       default:
@@ -104,7 +111,6 @@ const styles = StyleSheet.create({
   },
   tabView: {
     flex: 1,
-    alignItems: 'stretch',
-    paddingTop: 20
+    alignItems: 'stretch'
   }
 })
