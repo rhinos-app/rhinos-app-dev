@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 import React, { Component } from 'react'
-import { StyleSheet, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, TouchableOpacity, Easing } from 'react-native'
 import { SideMenu } from 'react-native-elements'
 import NavigationBar from 'react-native-navbar'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
-import { SimpleNavigator } from 'components'
+import { SimpleNavigator, PersonDetails } from 'components'
 import AppMenu from './AppMenu'
 import MainView from './MainView'
 import ContactUsView from './ContactUsView'
@@ -48,7 +48,10 @@ export class App extends Component {
                            views={{
                              initialView: MainView,
                              contactUs: ContactUsView,
-                             about: AboutView
+                             about: AboutView,
+                             personDetails: {
+                               component: PersonDetails, fx: { prop: 'top', fromValue: 500, toValue: 0, duration: 200, easing: Easing.ease }
+                             }
                            }}
           />
         </View>

@@ -22,9 +22,16 @@ export default class MainView extends React.Component {
       { key: '3', title: 'Third' }
     ]
   }
+  unmounting = false
 
   onTabChange = (index) => {
-    this.setState({ index })
+    if (!this.unmounting) {
+      this.setState({ index })
+    }
+  }
+
+  componentWillUnmount = () => {
+    this.unmounting = true
   }
 
   renderTabBarTop = (props) => {
@@ -81,7 +88,7 @@ export default class MainView extends React.Component {
       case '2':
         return (
           <View style={[ styles.tabView, { backgroundColor: baseStyles.BRAND } ]}>
-            <PersonList data={MockData.PersonArray} />
+            <PersonList data={MockData.PersonArray} onItemPress={() => this.props.nav.linkTo('personDetails')} />
           </View>
         )
       case '3':
