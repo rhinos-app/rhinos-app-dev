@@ -14,15 +14,16 @@
   "license": "MIT",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "lint": "eslint ./app",
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
     "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js -d --inline --hot --colors",
     "clean-web": "rm -Rf web/static/build/",
     "build-web": "npm run clean-web && webpack --colors --display-error-details --config web/webpack.config.prod.js",
     "serve-web-background": "serve --compress --port 8300 web/static/ > ~/rhinos-app.log 2>&1 &",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "commit": "commit-wizard"
+    "commit": "commit-wizard",
+    "test": "jest",
+    "lint": "eslint ./app"
   },
   "dependencies": {
     "react": "15.3.2",

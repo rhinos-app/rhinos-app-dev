@@ -2,6 +2,7 @@
 node_modules/
 android/build/
 android/app/build/
+android/app/src/main/res
 taskArtifacts
 ios/build/
 web/static/build/
