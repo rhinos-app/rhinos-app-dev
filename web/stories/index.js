@@ -2,9 +2,9 @@ import React from 'react'
 import { storiesOf, action, linkTo } from '@kadira/storybook'
 import Button from './Button'
 import Welcome from './Welcome'
-import AppMenu from '../app/views/AppMenu'
-import PersonList from '../app/components/PersonList/PersonList'
-import { MockData } from '../app/utils'
+import AppMenu from 'views/AppMenu'
+import PersonList from 'components/PersonList/PersonList'
+import { MockData } from 'utils'
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
@@ -19,12 +19,10 @@ storiesOf('Button', module)
     <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
   ))
 
-storiesOf('AppMenu', module)
-  .add('Example', () => (
-    <AppMenu />
-  ))
+storiesOf('AppMenu', module).add('Example', () => (
+  <AppMenu />
+))
 
-storiesOf('PersonList', module)
-  .add('Example', () => {
-    return <PersonList data={MockData.PersonArray} onPress={(item) => action('pressed')} />
-  })
+storiesOf('PersonList', module).add('Example', () => {
+  return <PersonList data={MockData.PersonArray} onItemPress={(item) => action('pressed')} />
+})
