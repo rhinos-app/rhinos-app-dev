@@ -9,8 +9,8 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { SimpleNavigator, PersonDetails } from 'components'
 import AppMenu from './AppMenu'
 import MainView from './MainView'
-import ContactUsView from './ContactUsView'
-import AboutView from './AboutView'
+import ContactUs from './ContactUs'
+import AboutUs from './AboutUs'
 import baseStyles from '../baseStyles'
 import AppInit from 'utils/init' // Webpack alias for Web mode: 'init.web.js'
 
@@ -47,8 +47,8 @@ export class App extends Component {
           <SimpleNavigator ref="nav"
                            views={{
                              initialView: MainView,
-                             contactUs: ContactUsView,
-                             about: AboutView,
+                             contactUs: ContactUs,
+                             aboutUs: AboutUs,
                              personDetails: {
                                component: PersonDetails, fx: { prop: 'top', fromValue: 500, toValue: 0, duration: 200, easing: Easing.ease }
                              }

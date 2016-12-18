@@ -1,12 +1,12 @@
 import React from 'react'
-import ContactUsView from './ContactUsView'
+import ContactUs from './ContactUs'
 
 // import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 
 it('renders correctly', () => {
   const tree = shallow(
-    <ContactUsView />
+    <ContactUs />
   )
   console.log(tree.debug())
 })

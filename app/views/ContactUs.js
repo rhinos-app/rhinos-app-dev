@@ -4,9 +4,10 @@ import {
     Text
 } from 'react-native'
 import { Button } from 'react-native-elements'
+import { WideButton } from 'components'
 import baseStyles from '../baseStyles'
 
-export default class ContactUsView extends React.Component {
+export default class ContactUs extends React.Component {
 
   render () {
     return (
@@ -20,19 +21,11 @@ export default class ContactUsView extends React.Component {
           backgroundColor={baseStyles.BRAND}
           icon={{ name: 'info-circle', type: 'font-awesome' }}
           title="Go to About Us"
-          onPress={() => this.props.nav.linkTo('about')}
+          onPress={() => this.props.nav.linkTo('aboutUs')}
           buttonStyle={baseStyles.link}
         />
 
-        <Button
-          raised
-          backgroundColor={'#fff'}
-          color={baseStyles.BRAND}
-          icon={{ name: 'chevron-left', type: 'font-awesome', color: baseStyles.BRAND }}
-          title="Go Back"
-          onPress={() => this.props.nav.back()}
-          buttonStyle={baseStyles.link}
-        />
+        <WideButton icon="chevron-left" title="Go Back" onPress={() => this.props.nav.back()} />
       </View>
     )
   }

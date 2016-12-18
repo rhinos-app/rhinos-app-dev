@@ -17,7 +17,7 @@ export default class AppMenu extends React.Component {
       }, {
         name: 'Contact Us', subtitle: 'Contact Us screen', link: 'contactUs'
       }, {
-        name: 'About Us', subtitle: 'About Us screen', link: 'about'
+        name: 'About Us', subtitle: 'About Us screen', link: 'aboutUs'
       }]
     return (
       <View style={[ styles.main, this.props.style ]}>

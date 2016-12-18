@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
-import { Button } from 'react-native-elements'
-import baseStyles from '../../baseStyles'
+import WideButton from '../Common/WideButton'
 
 export default class PersonDetails extends React.Component {
 
@@ -26,15 +25,7 @@ export default class PersonDetails extends React.Component {
         <View style={styles.content}>
         </View>
 
-        <Button
-          raised
-          backgroundColor={'#fff'}
-          color={baseStyles.BRAND}
-          icon={{ name: 'chevron-left', type: 'font-awesome', color: baseStyles.BRAND }}
-          title="Go Back"
-          onPress={() => this.props.nav.back({ tabIndex: 1 })}
-          buttonStyle={baseStyles.link}
-        />
+        <WideButton icon="chevron-left" title="Go Back" onPress={() => this.props.nav.back({ tabIndex: 1 })} />
       </View>
     )
   }
