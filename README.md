@@ -17,7 +17,7 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
   * Unit Test: Jest, Enzyme.
   * Miscellaneous features: yarn, ESLint (JS Standard), Webpack, baseStyles.js
 
-*It does not have X, Y, Z libs?* - We adopted [KISS](https://en.wikipedia.org/wiki/KISS_principle) principle but feel free to sprinkle some more pixie dust (Redux, MobX, etc.) to bake your project :)
+*It does not have X, Y, Z libs?* - We adopted [KISS](http://principles-wiki.net/principles:keep_it_simple_stupid) principle but feel free to sprinkle some more pixie dust (Redux, MobX, etc.) to bake your project :)
 
 *Demo video:*
 [![Demo video](docs/assets/demo.png)](https://www.youtube.com/watch?v=tJRVfUz6vbI)

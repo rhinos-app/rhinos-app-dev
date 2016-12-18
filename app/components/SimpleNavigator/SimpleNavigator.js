@@ -10,6 +10,7 @@ export default class SimpleNavigator extends React.Component {
     fxValue: new Animated.Value(0)
   }
   currentComp = null
+  navParams = null
   history = []
 
   startViewAnimation (fx) {
@@ -20,14 +21,16 @@ export default class SimpleNavigator extends React.Component {
     this.startViewAnimation(DEFAULT_FX)
   }
 
-  back = () => {
+  back = (navParams) => {
     this.history.pop()
+    this.navParams = navParams
     const lastViewId = this.history[ this.history.length - 1 ]
     this.setState({ currentView: lastViewId })
   }
 
-  linkTo = (viewId) => {
+  linkTo = (viewId, navParams) => {
     this.history.push(viewId)
+    this.navParams = navParams
     const { fx } = this.getViewObject(viewId)
     this.setState({ currentView: viewId, fxValue: new Animated.Value(fx.fromValue) })
   }
@@ -58,7 +61,7 @@ export default class SimpleNavigator extends React.Component {
 
     return (
       <Animated.View style={{ flex: 1, [currentFx.prop]: this.state.fxValue }}>
-        <this.currentComp nav={this} />
+        <this.currentComp nav={this} navParams={this.navParams} />
       </Animated.View>
     )
   }

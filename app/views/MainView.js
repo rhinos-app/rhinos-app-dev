@@ -15,7 +15,7 @@ const { GiftedForm } = require('react-native-gifted-form')
 
 export default class MainView extends React.Component {
   state = {
-    index: 0,
+    index: (this.props.navParams ? this.props.navParams.tabIndex : 0),
     routes: [
       { key: '1', title: 'First' },
       { key: '2', title: 'Second' },
@@ -88,7 +88,7 @@ export default class MainView extends React.Component {
       case '2':
         return (
           <View style={[ styles.tabView, { backgroundColor: baseStyles.BRAND } ]}>
-            <PersonList data={MockData.PersonArray} onItemPress={() => this.props.nav.linkTo('personDetails')} />
+            <PersonList data={MockData.PersonArray} onItemPress={(item) => this.props.nav.linkTo('personDetails', item)} />
           </View>
         )
       case '3':
