@@ -11,7 +11,7 @@ export default class PersonDetails extends React.Component {
   }
 
   render () {
-    const person = this.props.navParams || {}
+    const person = this.props.navParams.person || {}
     return (
       <View style={[ styles.main, this.props.style ]}>
         <View style={styles.profile}>
@@ -25,7 +25,7 @@ export default class PersonDetails extends React.Component {
         <View style={styles.content}>
         </View>
 
-        <WideButton icon="chevron-left" title="Go Back" onPress={() => this.props.nav.back({ tabIndex: 1 })} />
+        <WideButton icon="chevron-left" title="Back" onPress={() => this.props.nav.back()} />
       </View>
     )
   }

@@ -15,7 +15,7 @@ export default class AboutView extends React.Component {
           About Us
         </Text>
 
-        <WideButton icon="chevron-left" title="Go Back" onPress={() => this.props.nav.back()} />
+        <WideButton icon="chevron-left" title="Back" onPress={() => this.props.nav.back()} />
       </View>
     )
   }

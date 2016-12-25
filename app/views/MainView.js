@@ -15,12 +15,13 @@ const { GiftedForm } = require('react-native-gifted-form')
 
 export default class MainView extends React.Component {
   state = {
-    index: (this.props.navParams ? this.props.navParams.tabIndex : 0),
+    index: (this.props.lastState ? this.props.lastState.lastTabIndex : 0),
     routes: [
-      { key: '1', title: 'First' },
-      { key: '2', title: 'Second' },
-      { key: '3', title: 'Third' }
-    ]
+      { key: '1', title: 'First', tabIndex: 0 },
+      { key: '2', title: 'Second', tabIndex: 1 },
+      { key: '3', title: 'Third', tabIndex: 2 }
+    ],
+    lastTabIndex: 0
   }
   unmounting = false
 
@@ -46,6 +47,12 @@ export default class MainView extends React.Component {
                       labelStyle={{ color: '#596698' }} style={styleObj} />
   }
 
+  onPersonPress = (route, person) => {
+    this.setState({ lastTabIndex: route.tabIndex }, () => {
+      this.props.nav.linkTo(this, 'personDetails', { person })
+    })
+  }
+
   renderTabScene = ({ route }) => {
     switch (route.key) {
       case '1':
@@ -66,7 +73,7 @@ export default class MainView extends React.Component {
             backgroundColor={baseStyles.BRAND}
             icon={{ name: 'paper-plane-o', type: 'font-awesome' }}
             title="Go to Contact Us"
-            onPress={() => this.props.nav.linkTo('contactUs')}
+            onPress={() => this.props.nav.linkTo(this, 'contactUs')}
             buttonStyle={baseStyles.link}
           />
 
@@ -88,7 +95,7 @@ export default class MainView extends React.Component {
       case '2':
         return (
           <View style={[ styles.tabView, { backgroundColor: baseStyles.BRAND } ]}>
-            <PersonList data={MockData.PersonArray} onItemPress={(item) => this.props.nav.linkTo('personDetails', item)} />
+            <PersonList data={MockData.PersonArray} onItemPress={(person) => this.onPersonPress(route, person)} />
           </View>
         )
       case '3':
@@ -96,7 +103,7 @@ export default class MainView extends React.Component {
       default:
         return null
     }
-  };
+  }
 
   render () {
     return (

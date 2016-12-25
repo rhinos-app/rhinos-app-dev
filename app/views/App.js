@@ -27,7 +27,7 @@ export class App extends Component {
 
   appMenuItemClick = (menuItem) => {
     this.toggleSideMenu(false)
-    this.refs.nav.linkTo(menuItem.link)
+    this.refs.nav.linkTo(this, menuItem.link)
   }
 
   render () {
