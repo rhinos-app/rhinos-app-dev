@@ -7,7 +7,7 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
 
 [Live Demo: web version](http://45.56.126.43:8300/)
 
-## FEATURES: :star2:
+## :star2: FEATURES:
   * :iphone: :computer: Runs on Android, iOS, Web (can also run as a Windows/MacOS/Linux desktop app with [Electron](https://github.com/electron/electron))
   * [SimpleNavigator](app/components/SimpleNavigator/SimpleNavigator.js) with navParams, transition Fx (using Animated)
   * [React-native-gifted-form](https://github.com/FaridSafi/react-native-gifted-form)
@@ -24,11 +24,11 @@ Rhinos-app is a react-native app which uses [react-native-web](https://github.co
 
 <img src="docs/assets/demo-ios.gif" width="240">
 
-## DOCS:
+## :book: DOCS:
   * [Deployment](docs/Deployment.md)
   * [Common Issues / Troubleshooting](docs/Troubleshooting.md)
 
-## PREREQUISITES: :package:
+## :package: PREREQUISITES:
   * Android SDK
   * XCode
   * npm global modules:
@@ -37,7 +37,7 @@ $ npm install -g yarn
 $ npm install -g react-native-cli
 ```
 
-## BUILD & RUN: :wrench:
+## :wrench: BUILD & RUN:
 
 ### Install:
 ```
@@ -76,7 +76,7 @@ StoryBook:
     $ react-native run-ios
 ```
 
-## CONTRIBUTING :raised_hands:
+## :raised_hands: CONTRIBUTING:
 PRs, Stars :star: and Issue Reporting :beetle: are always welcome :)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
