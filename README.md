@@ -82,6 +82,6 @@ PRs, Stars :star: and Issue Reporting :beetle: are always welcome :)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
 
 ### Apps built on Rhinos-app
-[ATVT - Activities](https://github.com/rhinos-app/atvt) - track influencer's activities
+ATVT (Activities) - track influencer's social activities
 
 <img src="docs/assets/demo-atvt.gif" width="240">
