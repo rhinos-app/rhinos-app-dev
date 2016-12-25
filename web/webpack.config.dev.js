@@ -26,7 +26,8 @@ module.exports = {
         query: {
           cacheDirectory: true,
           babelrc: false, // ignore .babelrc because we can't use both "module-resolver" & webpack resolve
-          presets: ['react-native']
+          presets: ['react-native'],
+          plugins: ['transform-decorators-legacy']
         }
       },
       {

@@ -1,6 +1,6 @@
 {
   "name": "rhinosapp",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "repository": "https://github.com/rhinos-app/rhinos-app-dev.git",
   "url": "https://github.com/rhinos-app",
   "description": "Rhinos-app is a react-native app which uses react-native-web to achieve cross-platform design.",
@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/",
+    "bundle-android": "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --sourcemap-output android/app/src/main/assets/index.android.map --assets-dest android/app/src/main/res/ && cd android/ && ./gradlew assembleDebug",
     "web": "webpack-dev-server --port 3000 --config web/webpack.config.dev.js -d --inline --hot --colors",
     "clean-web": "rm -Rf web/static/build/",
     "build-web": "npm run clean-web && webpack --colors --display-error-details --config web/webpack.config.prod.js",
