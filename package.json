@@ -1,6 +1,6 @@
 {
   "name": "rhinosapp",
-  "version": "0.7.1",
+  "version": "0.8.1",
   "repository": "https://github.com/rhinos-app/rhinos-app-dev.git",
   "url": "https://github.com/rhinos-app",
   "description": "Rhinos-app is a react-native app which uses react-native-web to achieve cross-platform design.",
