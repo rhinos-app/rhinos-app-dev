@@ -1,6 +1,6 @@
 {
   "name": "rhinosapp",
-  "version": "0.7.1",
+  "version": "0.8.1",
   "repository": "https://github.com/rhinos-app/rhinos-app-dev.git",
   "url": "https://github.com/rhinos-app",
   "description": "Rhinos-app is a react-native app which uses react-native-web to achieve cross-platform design.",
@@ -26,16 +26,16 @@
     "lint": "eslint ./app"
   },
   "dependencies": {
-    "react": "15.3.2",
+    "react": "^15.4.1",
     "react-addons-shallow-compare": "^15.4.1",
-    "react-native": "~0.39.2",
+    "react-native": "^0.42.0",
     "react-native-animatable": "^1.1.0",
     "react-native-elements": "^0.7.1",
     "react-native-gifted-form": "^0.0.13",
     "react-native-navbar": "^1.5.4",
     "react-native-tab-view": "0.0.40",
     "react-native-vector-icons": "^3.0.0",
-    "react-native-web": "0.0.55",
+    "react-native-web": "0.0.81",
     "serve": "^1.4.0"
   },
   "devDependencies": {
